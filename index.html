@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple_Store</title>
+
+    <!-- General styles -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid-system.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/utilities.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/shared/index.css">
+
+    <!-- Specific styles -->
+    <link rel="stylesheet" href="./assets/css/shared/header.css">
+    <link rel="stylesheet" href="./assets/css/shared/main.css">
+    <link rel="stylesheet" href="./assets/css/shared/banner.css">
+    <link rel="stylesheet" href="./assets/css/shared/footer.css">
+    <link rel="stylesheet" href="./assets/css/shared/login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body onload="initialAppState()">
+    
+    <!-- start header -->
+    <section class="header">
+        <div class="container-fluid">
+            <div class="row centered">
+                <div class="col-4 col-md-4 col-sm-4">
+                    <nav>
+                        <ul>
+                            <div class="menu">
+                                <i class='bx bx-category'>
+                                    <a>MENU</a>
+                                </i>
+                                <ul class="menu-items">
+                                    <li><a href="./pages/auth/product.html#iphone-15-series">IPhone 15 Series</a></li>
+                                    <li><a href="./pages/auth/product.html#iphone-14-series">IPhone 14 Series</a></li>
+                                    <li><a href="./pages/auth/product.html#iphone-13-series">IPhone 13 Series</a></li>
+                                    <li><a href="./pages/auth/product.html#iphone-12-series">IPhone 12 Series</a></li>
+                                    <li><a href="./pages/auth/product.html#iphone-11-series">IPhone 11 Series</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-4 col-sm-4">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="./assets/img/logo/anh2.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-4">
+                    <div class="cart centered">
+                        <i class='bx bxs-cart'>
+                            <a href="./pages/cart/cart.html">CART</a>
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="bulkhead"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end header -->
+
+    <!-- start banner -->
+    <section class="banner centered">
+        <div class="container-fluid">
+            <div class="row centered">
+                <video class="w-100 max-w-100 " 
+                    autoplay muted loop id="video-background"
+                    muted="true" loop="true" autoplay="true" 
+                    src="./assets/img/Banner/large(3).mp4">
+                </video>
+                <div class="log-in centered">
+                    <a href="#"  id="loginBtn">
+                        LOG IN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end banner -->
+
+    <!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 login">
+                        <span class="close">&times;</span>
+                        <form id="loginForm" class="form">
+                            <h2>Sign Up</h2>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Type your email" required>
+                            <span id="emailError" class="error"></span>
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Type your username" required>
+                            <span id="usernameError" class="error"></span>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Type your password" required>
+                            <span id="passwordError" class="error"></span>
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+                            <span id="confirmPasswordError" class="error"></span>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                        
+                        
+                    </div>
+                    <div class="col-12 link">
+                        <h2>Or Sign In Using</h2>
+                        <div class="select">
+                            <i class='bx bxl-facebook-circle'></i>
+                            <i class='bx bxl-google'></i>
+                            <i class='bx bxl-twitter'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Login Modal -->
+
+
+    <!-- start main -->
+    <section class="main">
+        <div class="container-fluid mb-6">
+            <div id="product-list" class="row">
+                <!-- Products list will be append here by initialProducts in main.js -->                
+            </div>
+            <div id="product-list-2" class="row">
+                <!-- Products list will be append here by initialProducts in main.js -->                
+            </div>
+        </div>
+    </section>
+    <!-- end main -->
+
+    <!-- start footer -->
+    <section class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 col-sm-6">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 col-sm-6 mb-2">
+                    <h3>Notice Information</h3>
+                    <ul>
+                        <li><a href="#">Check for counterfeit products</a></li>
+                        <li><a href="#">Warranty guide</a></li>
+                        <li><a href="#">Product exchange regulations</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 col-sm-12 mb-2">
+                    <h3>Company</h3>
+                    <p>&copy; The company's copyright was registered on October 8, 2004.</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Use</p>
+                </div>
+                <div class="col-3 col-sm-12">
+                    <h3>Contact Us</h3>
+                    <address>
+                        National Highway 1A Thoi An <br>
+                        Ward District 12 <br>
+                        Ho Chi Minh City<br>
+                        Phone: +84949889492<br>
+                        Email: khanh081004@gmail.com
+                    </address>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-12">
+                    <p>Follow Us:</p>
+                    <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=100039100689775&mibextid=LQQJ4d">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>    
+                    </div>
+                </div>
+                <div class="col-6 col-sm-12">
+                    <p>Subscribe to our newsletter:</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end footer -->
+    <script src="./js/components.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

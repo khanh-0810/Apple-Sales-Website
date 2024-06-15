@@ -1,0 +1,151 @@
+* {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main .bulkhead {
+    margin-top: 3rem;
+    width: 80%; 
+    height: 0.1rem;  
+    background-color: rgb(153, 153, 153);
+}
+
+.main h2 {
+    margin-left: 2rem;
+    margin-top: 2.5rem;
+    font-size: var(--fs-3xl);
+}
+
+.product-one, 
+.product-twu,
+.product-three,
+.product-four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.product-one img,
+.product-twu img,
+.product-three img,
+.product-four img {
+    height: 30rem;
+}
+
+.product-one h3,
+.product-twu h3,
+.product-three h3,
+.product-four h3,
+.product-five h3,
+.product-six h3 {
+    margin-top: 2.5rem;
+    font-size: var(--fs-lg);
+}
+
+.product-one a,
+.product-twu a,
+.product-three a,
+.product-four a,
+.product-five a,
+.product-six a {
+    margin-top: 2.5rem;
+    width: 50%;
+    color: rgb(161, 157, 151);
+    font-size: var(--fs-lg);
+    border: 0.1rem solid rgb(161, 157, 151);
+    border-radius: 3rem;
+    padding: 1rem;
+    transition: linear 0.5s;
+}
+
+.product-one a:hover,
+.product-twu a:hover,
+.product-three a:hover,
+.product-four a:hover,
+.product-five a:hover,
+.product-six a:hover {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    transform: scale(1.1);
+}
+
+.product-one img:hover,
+.product-twu img:hover,
+.product-three img:hover,
+.product-four img:hover,
+.product-five img:hover,
+.product-six img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Tablet devices -> 740px <= Width < 1023px */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    
+   
+
+}
+
+
+@media screen and (max-width: 46.1875em) {
+    
+    .main .bulkhead {
+        margin-top: 4rem;
+        width: 80%; 
+        height: 0.1rem;  
+    }
+    
+    .main h2 {
+        margin-left: 2rem;
+        margin-top: 2.5rem;
+        font-size: var(--fs-lg);
+    }
+    
+    .product-one, 
+    .product-twu,
+    .product-three,
+    .product-four {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    
+    .product-one img,
+    .product-twu img,
+    .product-three img,
+    .product-four img {
+        height: 12rem;
+    }
+    
+    .product-one h3,
+    .product-twu h3,
+    .product-three h3,
+    .product-four h3,
+    .product-five h3,
+    .product-six h3 {
+        height: 3rem;
+        margin-top: 1rem;
+        width: 80%;
+        font-size: var(--fs-sm);
+    }
+    
+    .product-one a,
+    .product-twu a,
+    .product-three a,
+    .product-four a,
+    .product-five a,
+    .product-six a {
+        margin-top: 1rem;
+        width: 100%;
+        font-size: var(--fs-sm);
+    }
+
+}

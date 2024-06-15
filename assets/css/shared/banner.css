@@ -1,0 +1,65 @@
+
+.banner {
+    height: 100vh;
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo video sẽ lấp đầy toàn bộ phần tử cha mà không bị méo hoặc bị cắt */
+    object-position: center;
+    z-index: -1; /* Đảm bảo video sẽ hiển thị phía sau nội dung khác */
+}
+
+.log-in a {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-size: var(--fs-xl);
+    font-weight: bold;
+    color: aliceblue;
+    background-color: none;
+    border: 0.1rem solid rgb(255, 251, 251);
+    border-radius: 5rem;
+    text-decoration: none;
+}
+
+.log-in a:hover {
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+    border: none;
+}
+
+
+@media screen and (max-width: 46.1875em) {
+
+    #video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30rem;
+        object-position: center;
+        z-index: -1; 
+    }
+
+    .banner {
+        height: 30rem;
+    }
+
+    .log-in a {
+        margin-top: 10rem;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-size: var(--fs-xl);
+        font-weight: bold;
+        color: aliceblue;
+        background-color: none;
+        border: 0.1rem solid rgb(255, 251, 251);
+        border-radius: 5rem;
+        text-decoration: none;
+    }
+
+}

@@ -1,0 +1,145 @@
+* {
+    font-family: 'Mulish', sans-serif;
+    margin: 0; /* Loại bỏ margin mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+}
+
+.exit,
+.logo,
+.cart {
+    text-align: center;
+}
+
+.exit i{
+    color: aliceblue;
+    font-size: var(--fs-xl);
+    cursor: pointer;
+}
+
+.exit i a {
+    font-size: var(--fs-xl);
+    color: aliceblue;
+}
+
+.logo img {
+    height: auto;
+    width: 5rem;
+}
+
+.cart i {
+    color: aliceblue;
+    font-size: var(--fs-xl);
+    cursor: pointer;
+}
+
+.cart i a {
+    color: aliceblue;
+}
+
+.HeaderProduct {
+    height: 15rem;
+    background-color: #666666;
+    display: flex;
+}
+
+.HeaderProduct .exit {
+    font-size: var(--fs-xl);
+}
+
+.exit-items {
+    position: absolute;
+    width: 30%; /* Tuỳ chỉnh theo nội dung */
+    height: 100rem;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.8rem 1.6rem 0rem rgb(209, 199, 199);
+    z-index: 1;
+    transition: left 0.5s ease; /* Hiệu ứng transition cho việc di chuyển từ bên trái */
+}
+
+.exit-items li {
+    padding: 0.8rem 1.2rem;
+    text-align: right;
+}
+
+.exit:hover .exit-items {
+    left: 0; /* Khi hover, hiển thị menu-items từ bên trái */
+}
+
+
+.exit-items li a {
+    width: 100%;
+    color: rgb(161, 157, 151);
+    font-size: var(--fs-lg);
+    padding: 1.5rem;
+    transition: linear 0.5s;
+}
+
+.exit-items li a:hover {
+    color: aliceblue;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 46.1875em) {
+
+    .exit {
+        text-align: left;
+    }
+
+    .exit i {
+        font-size: var(--fs-lg);
+        cursor: pointer;
+    }
+    
+    .exit i a {
+        font-size: var(--fs-lg);
+    }
+
+    .logo {
+        text-align: center;
+    }
+    
+    .logo img {
+        height: auto;
+        width: 3rem;
+    }
+    
+    .cart {
+        text-align: right;
+    }
+    
+    .cart i {
+        font-size: var(--fs-lg);
+    }
+    
+    .cart i a {
+        font-size: var(--fs-lg);
+    }
+
+    .HeaderProduct {
+        height: 12rem;
+        left: 0;
+        right: 0;
+    }
+    
+    .HeaderProduct .exit {
+        font-size: var(--fs-xl);
+    }
+    
+    .exit-items li {
+        padding: 0.8rem 1.2rem;
+        text-align: right;
+    }
+    
+    .exit:hover .exit-items {
+        left: 0; /* Khi hover, hiển thị menu-items từ bên trái */
+    }
+    
+    
+    .exit-items li a {
+        width: 100%;
+        font-size: var(--fs-lg);
+        padding: 1.5rem;
+        transition: linear 0.5s;
+    }
+    
+}
