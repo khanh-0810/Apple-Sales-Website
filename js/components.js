@@ -27,7 +27,7 @@ function getProductCard(productFeatured) {
                         <img src="${url_img('productFeatured.images[0].url')}" alt="${productFeatured.name}">
                     </div>
                     <div class="col-12">
-                        <h3>${productFeatured.name}</h3>
+                        <h3>${productFeatured.id}</h3>
                     </div>
                     <div class="col-12">
                         <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See Details</a>
