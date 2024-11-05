@@ -56,7 +56,7 @@ function getProductCard(BestSeller) {
                         <img src="${url_img(img)}" alt="${BestSeller.name}">
                     </div>
                     <div class="col-12">
-                        <h3>${BestSeller.name}</h3>
+                        <h3>${BestSeller.id}</h3>
                     </div>
                     <div class="col-12">
                         <a href="./pages/auth/product-detail.html?id=${BestSeller.id}">See etails</a>
