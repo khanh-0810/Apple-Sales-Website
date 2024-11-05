@@ -7,8 +7,11 @@ function currencyFormatter(amount) {
 }
 
 function url_img($url){
-    let new_url = 'https://khanh-0810.github.io/Apple-Sales-Website/';
-    return new_url + "/" + $url;
+    if($url){
+        let new_url = 'https://khanh-0810.github.io/Apple-Sales-Website/';
+        return new_url + $url;
+    }
+    // return "Test";
 }
 
 const DEFAULT_SHIPPING_FEE = 30000;
@@ -24,10 +27,10 @@ function getProductCard(productFeatured) {
             <div class="product-one">
                 <div class="row centered">
                     <div class="col-12">
-                        <img src="${url_img('productFeatured.images[0].url')}" alt="${productFeatured.name}">
+                        <img src="${url_img(img)}" alt="${productFeatured.name}">
                     </div>
                     <div class="col-12">
-                        <h3>${productFeatured.id}</h3>
+                        <h3>${url_img("Test")}</h3>
                     </div>
                     <div class="col-12">
                         <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See Details</a>
@@ -42,6 +45,7 @@ function getProductCard(BestSeller) {
     if (!BestSeller || (typeof(BestSeller) !== 'object') || (BestSeller && Object.keys(BestSeller)?.length <= 0)) {
         return;
     }
+    const img = BestSeller.images[0].url;
 
 
     return `
@@ -49,7 +53,7 @@ function getProductCard(BestSeller) {
             <div class="product-one">
                 <div class="row centered">
                     <div class="col-12">
-                        <img src="${BestSeller.images[0].url}" alt="${BestSeller.name}">
+                        <img src="${url_img(img)}" alt="${BestSeller.name}">
                     </div>
                     <div class="col-12">
                         <h3>${BestSeller.name}</h3>
