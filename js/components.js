@@ -33,7 +33,7 @@ function getProductCard(productFeatured) {
                         <h3>${productFeatured.id}</h3>
                     </div>
                     <div class="col-12">
-                        <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See Details</a>
+                        <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See etails</a>
                     </div>
                 </div>
             </div>
