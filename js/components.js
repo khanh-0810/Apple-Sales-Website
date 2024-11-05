@@ -6,6 +6,11 @@ function currencyFormatter(amount) {
     return amount.toLocaleString('vi-VN', { currency: 'VND', style: 'currency' });
 }
 
+function url_img($url){
+    let new_url = 'https://khanh-0810.github.io/Apple-Sales-Website/';
+    return new_url + "/" + $url;
+}
+
 const DEFAULT_SHIPPING_FEE = 30000;
     
 function getProductCard(productFeatured) {
@@ -19,7 +24,7 @@ function getProductCard(productFeatured) {
             <div class="product-one">
                 <div class="row centered">
                     <div class="col-12">
-                        <img src="${productFeatured.images[0].url}" alt="${productFeatured.name}">
+                        <img src="${url_img('productFeatured.images[0].url')}" alt="${productFeatured.name}">
                     </div>
                     <div class="col-12">
                         <h3>${productFeatured.name}</h3>
@@ -98,7 +103,7 @@ function getCartItem(product) {
                 </div>
                 <div class="col-2 col-sm-4 price">
                     <p>
-                        ${currencyFormatter(product.price ?? 0)}
+                        ${currencyFormatter((product.price*product.quantity) ?? 0)}
                     </p>
                 </div>
                 <div class="col-2 col-sm-4 btn-remove">
