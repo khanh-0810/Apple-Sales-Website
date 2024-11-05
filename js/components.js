@@ -30,7 +30,7 @@ function getProductCard(productFeatured) {
                         <h3>${productFeatured.name}</h3>
                     </div>
                     <div class="col-12">
-                        <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See etails</a>
+                        <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See Details</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@ function getProductCard(BestSeller) {
                         <h3>${BestSeller.name}</h3>
                     </div>
                     <div class="col-12">
-                        <a href="./pages/auth/product-detail.html?id=${BestSeller.id}">See Details</a>
+                        <a href="./pages/auth/product-detail.html?id=${BestSeller.id}">See etails</a>
                     </div>
                 </div>
             </div>
