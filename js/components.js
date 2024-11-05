@@ -7,11 +7,11 @@ function currencyFormatter(amount) {
 }
 
 function url_img($url){
-    if($url){
-        let new_url = 'https://khanh-0810.github.io/Apple-Sales-Website/';
-        return new_url + $url;
-    }
-    // return "Test";
+    // if($url){
+    //     let new_url = 'https://khanh-0810.github.io/Apple-Sales-Website/';
+    //     return new_url + $url;
+    // }
+    return "Test";
 }
 
 const DEFAULT_SHIPPING_FEE = 30000;
@@ -30,10 +30,10 @@ function getProductCard(productFeatured) {
                         <img src="${url_img(img)}" alt="${productFeatured.name}">
                     </div>
                     <div class="col-12">
-                        <h3>${productFeatured.id}</h3>
+                        <h3>${url_img("Test")}</h3>
                     </div>
                     <div class="col-12">
-                        <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See etails</a>
+                        <a href="./pages/auth/Product-detail.html?id=${productFeatured.id}">See Details</a>
                     </div>
                 </div>
             </div>
